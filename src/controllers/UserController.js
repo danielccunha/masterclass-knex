@@ -5,6 +5,11 @@ class UserController {
     const users = await knex.select('*').from('users');
     return response.json(users);
   }
+
+  async create(request, response) {
+    const { username } = request.body;
+    return response.json({ username });
+  }
 }
 
 module.exports = new UserController();
