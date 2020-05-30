@@ -1,6 +1,16 @@
-# masterclass-knex
+<div align="center">
 
-> Project developed in Rocketseat's Knex masterclass
+  <h1>
+   <i>masterclass-knex</i>
+  </h1>
+
+  <p>
+  Project developed in Rocketseat's Knex masterclass
+  </p>
+
+  <a href="https://insomnia.rest/run/?label=masterclass-knex&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fdanielccunha%2Fmasterclass-knex%2Fmaster%2Fdocs%2Finsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+
+</div>
 
 ## Getting Started
 
