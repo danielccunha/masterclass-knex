@@ -3,5 +3,8 @@ const { celebrate } = require('celebrate');
 const UserValidator = require('./UserValidator');
 
 exports.User = {
-  create: celebrate(UserValidator),
+  show: celebrate(UserValidator.show),
+  create: celebrate(UserValidator.create),
+  update: celebrate(UserValidator.update),
+  delete: celebrate(UserValidator.delete),
 };
