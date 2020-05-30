@@ -2,7 +2,7 @@ const knex = require('../database');
 
 class UserController {
   async index(request, response) {
-    const users = await knex('users').select('*');
+    const users = await knex('users').select('*').where('deleted_at', null);
     return response.json(users);
   }
 
@@ -61,7 +61,9 @@ class UserController {
 
   async delete(request, response) {
     const { id } = request.params;
-    const count = await knex('users').where('id', id).delete();
+    const count = await knex('users')
+      .where('id', id)
+      .update('deleted_at', new Date());
 
     // Verify if user were deleted
     if (!count) {

@@ -16,7 +16,8 @@ class ProjectController {
       query
         .where({ user_id: userId })
         .join('users', 'users.id', '=', 'projects.user_id')
-        .select('projects.*', 'users.username');
+        .select('projects.*', 'users.username')
+        .where('users.deleted_at', null);
 
       countQuery.where({ user_id: userId });
     }
